@@ -19,7 +19,7 @@ async def inline_users(query: InlineQuery):
 @Client.on_inline_query()
 async def answer(bot, query):
     """Show search results for given inline query"""
-    
+
     if not await inline_users(query):
         await query.answer(results=[],
                            cache_time=0,
